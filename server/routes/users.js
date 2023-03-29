@@ -40,7 +40,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-//get a user
+// get a user
 router.get("/", async (req, res) => {
   const userId = req.query.userId;
   const username = req.query.username;
@@ -55,7 +55,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-//get friends
+// //get friends
 router.get("/friends/:userId", async (req, res) => {
   try {
     const user = await User.findById(req.params.userId);
